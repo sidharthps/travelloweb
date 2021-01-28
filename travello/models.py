@@ -7,3 +7,4 @@ class Destination:
     image : str
     destination : str
     price : int
+    offer : bool
