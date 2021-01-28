@@ -1,4 +1,5 @@
 {%load static%}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -249,41 +250,20 @@
 					<div class="destinations_container item_grid">
 
 						<!-- Destination -->
+						{%for dest in dests%}
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{% static 'images/destination_1.jpg'%}" alt="">
+								<img src="{{baseUrl}}/{{dest.image}}" alt="">
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
 							</div>
 							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{dest1.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest1.description}}.</p></div>
-								<div class="destination_price">From ${{dest1.price}}</div>
+								<div class="destination_title"><a href="destinations.html">{{dest.name}}</a></div>
+								<div class="destination_subtitle"><p>{{dest.description}}.</p></div>
+								<div class="destination_price">From ${{dest.price}}</div>
 							</div>
 						</div>
+						{%endfor%}
 
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_2.jpg'%}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{dest2.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest2.description}}</p></div>
-								<div class="destination_price">From {{dest2.price}}</div>
-							</div>
-						</div>
-
-						<!-- Destination -->
-						<div class="destination item">
-							<div class="destination_image">
-								<img src="{% static 'images/destination_3.jpg'%}" alt="">
-							</div>
-							<div class="destination_content">
-								<div class="destination_title"><a href="destinations.html">{{dest3.name}}</a></div>
-								<div class="destination_subtitle"><p>{{dest3.description}}</p></div>
-								<div class="destination_price">From ${{dest3.price}}</div>
-							</div>
-						</div>
 
 
 					</div>
