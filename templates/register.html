@@ -15,5 +15,10 @@
     <input type="password" name="password2" placeholder="ConfirmPassword"><br>
     <input type="submit"><br>
 </form>
+<div>
+    {%for message in messages%}
+    <h3>{{message}}</h3>
+    {%endfor%}
+</div>
 </body>
 </html>
