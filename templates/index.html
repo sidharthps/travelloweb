@@ -32,8 +32,15 @@
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
 									<li class="active"><a href="">Home</a></li>
+									{%if user.is_authenticated%}
+									<li>Hello,{{user.first_name}}</li>
+									<li><a href="accounts/logout">Logout</a></li>
+									{%else%}
 									<li><a href="accounts/login">Login</a></li>
 									<li><a href="accounts/register">Register</a></li>
+									{%endif%}
+
+									<
 
 								</ul>
 							</nav>
