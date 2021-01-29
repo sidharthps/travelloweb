@@ -31,14 +31,13 @@
 							<div class="logo"><a href="index.html">Travello</a></div>
 							<nav class="main_nav">
 								<ul class="d-flex flex-row align-items-start justify-content-start">
-									<li class="active"><a href="index.html">Home</a></li>
-									<li><a href="about.html">About us</a></li>
-									<li><a href="#">Services</a></li>
-									<li><a href="news.html">News</a></li>
-									<li><a href="contact.html">Contact</a></li>
+									<li class="active"><a href="">Home</a></li>
+									<li><a href="">About us</a></li>
+									<li><a href="accounts/register">Register</a></li>
+
 								</ul>
 							</nav>
-							<div class="header_phone ml-auto">Call us</div>
+
 
 							<!-- Hamburger -->
 
@@ -74,22 +73,10 @@
 			<ul>
 				<li><a href="inex.html">Home</a></li>
 				<li><a href="about.html">About us</a></li>
-				<li><a href="#">Services</a></li>
-				<li><a href="news.html">News</a></li>
-				<li><a href="contact.html">Contact</a></li>
+
 			</ul>
 		</div>
-		<div class="menu_social">
-			<div class="menu_phone ml-auto">Call us: 00-56 445 678 33</div>
-			<ul class="d-flex flex-row align-items-start justify-content-start">
-				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-			</ul>
-		</div>
+
 	</div>
 	
 	<!-- Home -->
@@ -253,7 +240,7 @@
 						{%for dest in dests%}
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{{baseUrl}}/{{dest.image}}" alt="">
+								<img src="{{dest.image.url }}" alt="">
 								{%if dest.offer%}
 								<div class="spec_offer text-center"><a href="#">Special Offer</a></div>
 								{%endif%}
