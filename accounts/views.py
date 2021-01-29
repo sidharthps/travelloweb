@@ -24,7 +24,7 @@ def register(request):
                 user.save();
                 print('user created')
         else:
-            print('password not matching')
+            messages.info(request,'Passwords not matching')
             return redirect('register')
     else:
         return render(request, 'register.html')
